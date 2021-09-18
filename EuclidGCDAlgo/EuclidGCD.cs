@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace EuclidGCDNamespace
 {
 /// <summary>
@@ -15,7 +16,18 @@ public class EuclidGCD
         /// <returns>GCD of num1 and num2</returns>
         public static long ComputeGCD(long m, long n)
         {
-            throw new System.NotImplementedException();
+            long r = 0;
+            if(m < n){
+                r = m;
+                m = n;
+                n = r;
+            }
+            while(n != 0){
+                r = m % n;
+                m = n;
+                n = r;
+            }
+            return m;
         }
     }
 }
