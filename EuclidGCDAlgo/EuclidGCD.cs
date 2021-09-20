@@ -1,10 +1,10 @@
 ﻿
 namespace EuclidGCDNamespace
 {
-/// <summary>
-/// Euclid GCD Computations
-/// </summary>
-public class EuclidGCD
+    /// <summary>
+    /// Euclid GCD Computations
+    /// </summary>
+    public class EuclidGCD
     {
         /// <summary>
         /// Compute the Greatest Common Divisor of two numbers
@@ -15,7 +15,15 @@ public class EuclidGCD
         /// <returns>GCD of num1 and num2</returns>
         public static long ComputeGCD(long m, long n)
         {
-            throw new System.NotImplementedException();
+            if (m < n) { long tmp = m; m = n; n = tmp; }
+            while (n != 0)
+            {
+                long r;
+                r = m % n;
+                m = n;
+                n = r;
+            }
+            return m;
         }
     }
 }
