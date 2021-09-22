@@ -15,7 +15,20 @@ public class EuclidGCD
         /// <returns>GCD of num1 and num2</returns>
         public static long ComputeGCD(long m, long n)
         {
-            throw new System.NotImplementedException();
+            long swappedNumber = 0;
+            if (m < n)
+            {
+                swappedNumber = m;
+                m = n;
+                n = swappedNumber;
+            }
+            while (n != 0)
+            {
+                swappedNumber = m % n;
+                m = n;
+                n = swappedNumber;
+            }
+            return m;
         }
     }
 }
