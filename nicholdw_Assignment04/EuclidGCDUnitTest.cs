@@ -1,4 +1,5 @@
-﻿using EuclidGCDNamespace;
+﻿
+using EuclidGCDNamespace;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
